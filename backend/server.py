@@ -1,10 +1,9 @@
 from flask import Flask, Response
 import cv2 as opencv
 
-videoInt = 1 
 
 app = Flask(__name__)
-camera = opencv.VideoCapture(videoInt | 0)
+camera = opencv.VideoCapture(0)
 
 def generate_frames():
     while True:
